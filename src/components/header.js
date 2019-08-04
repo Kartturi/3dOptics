@@ -3,30 +3,46 @@ import PropTypes from "prop-types"
 import React from "react"
 
 const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
+  <header>
+    <div className="header">
+      <div className="header__logo">
+        <h1 className="Logo" style={{ margin: 0 }}>
+          <Link
+            to="/"
+            style={{
+              color: `white`,
+              textDecoration: `none`,
+            }}
+          >
+            <span
+              style={{
+                color: `#ff0000`,
+                textDecoration: `none`,
+              }}
+            >
+              3
+            </span>
+            <span
+              style={{
+                color: "#666666",
+              }}
+            >
+              D-OPTICS
+            </span>
+          </Link>
+        </h1>
+      </div>
+      <div className="header__nav">
+        <Link to="#" className="header__nav_item">
+          Palvelut
         </Link>
-      </h1>
+        <Link to="#" className="header__nav_item">
+          Yritys
+        </Link>
+        <Link to="#" className="header__nav_item">
+          Yhteystiedot
+        </Link>
+      </div>
     </div>
   </header>
 )

@@ -1,20 +1,29 @@
 import React from "react"
 import { Link } from "gatsby"
+import { Helmet } from "react-helmet"
 
 import Layout from "../components/layout"
+import Hero from "../components/hero"
+import Services from "../components/services"
+import Company from "../components/company"
+import Contact from "../components/contact"
 import Image from "../components/image"
 import SEO from "../components/seo"
 
-const IndexPage = () => (
+const IndexPage = ({ children }) => (
   <Layout>
+    <Helmet>
+      <link
+        href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap"
+        rel="stylesheet"
+      />
+    </Helmet>
     <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
+
+    <Hero></Hero>
+    <Services></Services>
+    <Company></Company>
+    <Contact></Contact>
   </Layout>
 )
 
