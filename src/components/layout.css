@@ -138,7 +138,7 @@ header {
 }
 
 .service__item_title {
-  background: #3366ff;
+  background: purple;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   padding: 10px 0px 10px 0px;
@@ -254,7 +254,7 @@ header {
   border-right: 1px solid purple;
 }
 
-.contact__left form input {
+.contact__left_input {
   display: block;
   width: 300px;
   margin-top: 5px;
@@ -278,6 +278,21 @@ header {
   border: 1px solid purple;
 }
 
+.contact__left_submit {
+  display: block;
+  width: 315px;
+  margin-top: 5px;
+  margin-bottom: 30px;
+  height: 40px;
+  padding-left: 15px;
+  border-radius: 10px;
+  outline: none;
+  color: white;
+  background: purple;
+  border: none;
+  cursor: pointer;
+}
+
 .contact__right {
   width: 40%;
 }
@@ -292,3 +307,49 @@ header {
 }
 
 /*Contact end*/
+
+/*Footer*/
+
+.footer {
+  margin-top: 60px;
+
+  background: #f5f3f3;
+  color: #666666;
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.footer__item {
+  width: 30%;
+  text-align: center;
+}
+
+.footer__text {
+  text-align: left;
+}
+
+.footer__text p {
+  margin: 0px;
+  font-size: 14px;
+}
+
+.footer__copyright {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.footer__copyright p {
+  margin: 0px;
+  padding: 0px;
+}
+
+.footer__social_icon:hover {
+  color: yellow;
+}
+
+/*Footer end*/

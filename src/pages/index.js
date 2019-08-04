@@ -7,6 +7,7 @@ import Hero from "../components/hero"
 import Services from "../components/services"
 import Company from "../components/company"
 import Contact from "../components/contact"
+
 import Image from "../components/image"
 import SEO from "../components/seo"
 

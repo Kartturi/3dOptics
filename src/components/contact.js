@@ -19,22 +19,39 @@ const Contact = () => {
           <form onSubmit={handleSubmit}>
             <label>
               Nimi
-              <input type="text" placeholder="Nimi" />
+              <input
+                className="contact__left_input"
+                type="text"
+                placeholder="Nimi"
+              />
             </label>
             <label>
               Sähköposti
-              <input type="email" placeholder="Sähköposti" />
+              <input
+                className="contact__left_input"
+                type="email"
+                placeholder="Sähköposti"
+              />
             </label>
             <label>
               Puhelin
-              <input type="phone" placeholder="Puhelin" />
+              <input
+                className="contact__left_input"
+                type="phone"
+                placeholder="Puhelin"
+              />
             </label>
             <label>
               Viesti
               <textarea placeholder="Viesti"></textarea>
             </label>
-
-            <button type="submit">Lähetä</button>
+            <label>
+              <input
+                className="contact__left_submit"
+                type="submit"
+                value="Lähetä"
+              />
+            </label>
           </form>
         </div>
         <div className="contact__right">

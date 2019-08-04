@@ -9,14 +9,15 @@ import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import { library } from "@fortawesome/fontawesome-svg-core"
-import { fab } from "@fortawesome/free-brands-svg-icons"
+import { fab, faInstagram } from "@fortawesome/free-brands-svg-icons"
 import { faHome, faCoffee, faHotel } from "@fortawesome/free-solid-svg-icons"
 
 import Header from "./header"
+import Footer from "./footer"
 
 import "./layout.css"
 
-library.add(fab, faHome, faCoffee, faHotel)
+library.add(fab, faHome, faCoffee, faHotel, faInstagram)
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -33,6 +34,7 @@ const Layout = ({ children }) => {
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
       <main> {children}</main>
+      <Footer></Footer>
     </>
   )
 }
