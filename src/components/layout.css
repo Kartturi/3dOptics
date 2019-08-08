@@ -65,12 +65,13 @@ header {
   top: 30px;
   z-index: 10;
   opacity: 1;
-  transition: visibility 0s, opacity 0.5s linear;
+  transition: visibility 0s, opacity 0.3s linear;
 }
 
 .second-nav__container_hidden {
   visibility: hidden;
   opacity: 0;
+  position: fixed;
 }
 
 .second-nav {
@@ -106,23 +107,23 @@ header {
 
 .second-nav__content {
   position: fixed;
-  display: none;
+  visibility: hidden;
   left: 0px;
   top: 0px;
   height: 100vh;
   width: 0px;
   background: #f5f3f3;
   z-index: 100;
-  transition: 1s;
+  transition: 0.3s;
 }
 .second-nav__content_visible {
   width: 300px;
-  display: block;
+  visibility: visible;
 }
 
 .second-nav__content_links {
   margin-top: 200px;
-  visibility: inherit;
+
   width: 0;
 }
 .second-nav__content_link {
@@ -131,7 +132,6 @@ header {
   margin-left: 35px;
   cursor: pointer;
   display: block;
-  transition: 0.3s;
 }
 
 .second-nav__content_link:hover {
@@ -148,9 +148,38 @@ header {
   height: calc(100vh - 100px);
 }
 
+.hero-frame__container {
+  position: inherit;
+  width: inherit;
+  height: inherit;
+}
+
 .hero-frame {
   width: 100%;
   height: 100%;
+}
+
+.hero-frame__arrows {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  bottom: 30px;
+}
+
+.hero-frame__title {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.hero-frame__arrows_icon {
+  margin-left: 15px;
+  margin-right: 15px;
+  cursor: pointer;
+}
+.hero-frame__arrows_icon:hover {
+  color: purple;
 }
 
 .hero__init {
