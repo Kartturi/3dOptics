@@ -3,7 +3,7 @@ import React, { useState } from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 const Hero = () => {
-  const [virtualTour, setVirtualTour] = useState(false)
+  const [virtualTour, setVirtualTour] = useState(true)
   const [currentTourId, setCurrentTourId] = useState(1)
   const [currentTourUrl, setCurrentTourUrl] = useState(
     "https://vt.plushglobalmedia.com/tour/TT167IBD6F/embed?fbclid=IwAR35i7z3whgB6y5kTp0FNwlK7JaeuxwX8xCf4j72DsrgUAzRM5MebmSKL88"
@@ -16,14 +16,14 @@ const Hero = () => {
     const tourArr = [
       {
         id: 1,
-        desc: "Omakotitalo",
+        desc: "1.Omakotitalo",
         url:
           "https://vt.plushglobalmedia.com/tour/TT167IBD6F/embed?fbclid=IwAR35i7z3whgB6y5kTp0FNwlK7JaeuxwX8xCf4j72DsrgUAzRM5MebmSKL88",
       },
 
       {
         id: 2,
-        desc: "Kokoustilat vuokralle",
+        desc: "2.Kokoustilat vuokralle",
         url:
           "https://vt.plushglobalmedia.com/tour/TT167OBLNC/embed?fbclid=IwAR0g0LW_33FJFdpYTs2Lu4ldWZEAlp4KQAi2TXwLTl6BIPsDcmxnl6IIS5w",
       },
@@ -78,7 +78,12 @@ const Hero = () => {
             frameBorder="0"
             style={{ position: "absolute", height: "85%", border: "none" }}
           ></iframe>
-          <div className="hero-frame__arrows">
+          <div className="hero__title_container">
+            <h2 className="hero__title_text">
+              360 kuvat ja VR-kierrokset liiketoiminnan tueksi
+            </h2>
+          </div>
+          {/* <div className="hero-frame__arrows">
             <h5 className="hero-frame__title">{`${currentTourDesc}`}</h5>
             <FontAwesomeIcon
               onClick={() => {
@@ -96,7 +101,7 @@ const Hero = () => {
               size="3x"
               className="hero-frame__arrows_icon"
             />
-          </div>
+          </div> */}
         </div>
       )}
     </div>

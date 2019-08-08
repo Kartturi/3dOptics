@@ -7,6 +7,7 @@ import Hero from "../components/hero"
 import Services from "../components/services"
 import Company from "../components/company"
 import Contact from "../components/contact"
+import Gallery from "../components/gallery"
 import SecondaryNav from "../components/secondaryNav"
 
 import Image from "../components/image"
@@ -16,7 +17,7 @@ const IndexPage = ({ children }) => (
   <Layout>
     <Helmet>
       <link
-        href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap"
+        href="https://fonts.googleapis.com/css?family=Pacifico|Roboto:300,400,500&display=swap"
         rel="stylesheet"
       />
     </Helmet>
@@ -25,6 +26,7 @@ const IndexPage = ({ children }) => (
     <Hero></Hero>
     <Services></Services>
     <Company></Company>
+    <Gallery></Gallery>
     <Contact></Contact>
   </Layout>
 )
