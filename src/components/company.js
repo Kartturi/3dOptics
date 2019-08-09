@@ -41,7 +41,7 @@ const Company = () => {
         <div className="company__right_container">
           <Img
             fluid={data.company.childImageSharp.fluid}
-            style={{ margin: "1rem", maxHeight: "calc(50vh - 4rem)" }}
+            style={{ margin: "1rem", maxHeight: "calc(70vh - 4rem)" }}
             imgStyle={{ objectFit: "contain" }}
           ></Img>
         </div>

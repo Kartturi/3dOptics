@@ -23,11 +23,43 @@ const ServiceRight = props => {
           }
         }
       }
+      sr3: file(relativePath: { eq: "service3.jpg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      sr4: file(relativePath: { eq: "service4.jpg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      sr5: file(relativePath: { eq: "service5.jpg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      sr6: file(relativePath: { eq: "service6.jpg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
     }
   `)
   const imageQueries = {
     img1: data.sr1.childImageSharp.fluid,
     img2: data.sr2.childImageSharp.fluid,
+    img3: data.sr3.childImageSharp.fluid,
+    img4: data.sr4.childImageSharp.fluid,
+    img5: data.sr5.childImageSharp.fluid,
+    img6: data.sr6.childImageSharp.fluid,
   }
   console.log(props.current)
   return (

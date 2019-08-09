@@ -12,7 +12,7 @@ const Services2 = () => {
   return (
     <div className="service2">
       <div className="service__container_left">
-        <h3 className="service2__title">Kenelle?</h3>
+        <h3 className="service2__title">Kuka tarvitsee virtuaalikierroksia?</h3>
         <div className="service2__left">
           <div
             className={`service2__left_item ${
