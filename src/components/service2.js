@@ -1,67 +1,120 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
-import React from "react"
+import React, { useState } from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import ServiceRight from "./serviceRight"
 
 const Services2 = () => {
+  const [showCurrent, setShowCurrent] = useState("1")
+  const handleClick = e => {
+    e.stopPropagation()
+    console.log(e.target.dataset.current)
+  }
+
   return (
     <div className="service2">
       <div className="service__container_left">
         <h3 className="service2__title">Kenelle?</h3>
         <div className="service2__left">
-          <div className="service2__left_item">
+          <div
+            className={`service2__left_item ${
+              showCurrent === "1" ? "service2__left_item_active" : ""
+            } `}
+            data-current="1"
+            onClick={() => {
+              setShowCurrent("1")
+            }}
+          >
             <FontAwesomeIcon
               icon="home"
               size="4x"
-              style={{ color: "#000000", marginTop: "15px" }}
+              style={{ color: "purple" }}
             />
-            <h4>Kiinteistönvälittäjät</h4>
+            <h4 className="service2__left_item_title">Kiinteistönvälittäjät</h4>
           </div>
-          <div className="service2__left_item">
+          <div
+            onClick={() => {
+              setShowCurrent("2")
+            }}
+            className={`service2__left_item ${
+              showCurrent === "2" ? "service2__left_item_active" : ""
+            } `}
+            data-current="2"
+          >
             <FontAwesomeIcon
               icon="coffee"
               size="4x"
-              style={{ color: "#000000", marginTop: "15px" }}
+              style={{ color: "purple", marginTop: "15px" }}
             />
-            <h4>Ravintolat</h4>
+            <h4 className="service2__left_item_title">Ravintolat</h4>
           </div>
-          <div className="service2__left_item">
+          <div
+            onClick={() => {
+              setShowCurrent("3")
+            }}
+            className={`service2__left_item ${
+              showCurrent === "3" ? "service2__left_item_active" : ""
+            } `}
+            data-current="3"
+          >
             <FontAwesomeIcon
-              icon="coffee"
+              icon="hotel"
               size="4x"
-              style={{ color: "#000000", marginTop: "15px" }}
+              style={{ color: "purple", marginTop: "15px" }}
             />
-            <h4>Hotellit</h4>
+            <h4 className="service2__left_item_title">Hotellit</h4>
           </div>
-          <div className="service2__left_item">
+          <div
+            onClick={() => {
+              setShowCurrent("4")
+            }}
+            className={`service2__left_item ${
+              showCurrent === "4" ? "service2__left_item_active" : ""
+            } `}
+            data-current="4"
+          >
             <FontAwesomeIcon
               icon="school"
               size="4x"
-              style={{ color: "#000000", marginTop: "15px" }}
+              style={{ color: "purple", marginTop: "15px" }}
             />
-            <h4>Julkiset tilat</h4>
+            <h4 className="service2__left_item_title">Julkiset tilat</h4>
           </div>
-          <div className="service2__left_item">
+          <div
+            onClick={() => {
+              setShowCurrent("5")
+            }}
+            className={`service2__left_item ${
+              showCurrent === "5" ? "service2__left_item_active" : ""
+            } `}
+            data-current="5"
+          >
             <FontAwesomeIcon
               icon="car"
               size="4x"
-              style={{ color: "#000000", marginTop: "15px" }}
+              style={{ color: "purple", marginTop: "15px" }}
             />
-            <h4>Autokauppa</h4>
+            <h4 className="service2__left_item_title">Autokauppa</h4>
           </div>
-          <div className="service2__left_item">
+          <div
+            onClick={() => {
+              setShowCurrent("6")
+            }}
+            className={`service2__left_item ${
+              showCurrent === "6" ? "service2__left_item_active" : ""
+            } `}
+            data-current="6"
+          >
             <FontAwesomeIcon
               icon="user"
               size="4x"
-              style={{ color: "#000000", marginTop: "15px" }}
+              style={{ color: "purple", marginTop: "15px" }}
             />
-            <h4>Muut</h4>
+            <h4 className="service2__left_item_title">Muut</h4>
           </div>
         </div>
       </div>
-      <div className="service2__right">asd</div>
+      <div className="service2__right">
+        <ServiceRight current={showCurrent}></ServiceRight>
+      </div>
     </div>
   )
 }
