@@ -1,6 +1,9 @@
 import PropTypes from "prop-types"
 import React, { useState } from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { useStaticQuery, graphql } from "gatsby"
+import BackgroundImage from "gatsby-background-image"
+import Img from "gatsby-image"
 
 const Hero = () => {
   const [virtualTour, setVirtualTour] = useState(false)
@@ -15,6 +18,18 @@ const Hero = () => {
   const [currentTourDesc, setCurrentTourDesc] = useState(
     "Omakotitalo sunnanviikissä"
   )
+
+  const data = useStaticQuery(graphql`
+    query {
+      hero: file(relativePath: { eq: "trash17.jpg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  `)
 
   const handleTourDisplay = (current, direction) => {
     const tourArr = [
@@ -59,27 +74,34 @@ const Hero = () => {
     setCurrentTourUrl(tourArr[newCurrentNum - 1].url)
   }
 
-  console.log(currentTourId, "asd")
+  const imageData = data.hero.childImageSharp.fluid
   return (
     <div className="hero">
       {!virtualTour ? (
-        <div className="hero__init">
-          <div className="hero__title_container_init">
-            <h2 className="hero__title_text_init">
-              360 kuvat ja VR-kierrokset liiketoiminnan tueksi
-            </h2>
+        <BackgroundImage
+          Tag="div"
+          className="hero__background_img"
+          fluid={imageData}
+          backgroundColor={`#040e18`}
+        >
+          <div className="hero__init">
+            <div className="hero__title_container_init">
+              <h2 className="hero__title_text_init">
+                360 kuvat ja VR-kierrokset liiketoiminnan tueksi
+              </h2>
+              <div className="hero__cta">
+                <button
+                  className="hero__cta_btn"
+                  onClick={e => {
+                    setVirtualTour(true)
+                  }}
+                >
+                  Tutustu virtuaalikierroksiin
+                </button>
+              </div>
+            </div>
           </div>
-          <div className="hero__cta">
-            <button
-              className="hero__cta_btn"
-              onClick={e => {
-                setVirtualTour(true)
-              }}
-            >
-              Tutustu virtuaalikierroksiin
-            </button>
-          </div>
-        </div>
+        </BackgroundImage>
       ) : (
         <div className="hero-frame__container">
           <iframe

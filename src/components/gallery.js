@@ -1,8 +1,12 @@
-import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
+import React, { useState } from "react"
+import BackgroundImage from "gatsby-background-image"
+import Overlay from "../components/overlay"
 import Img from "gatsby-image"
 
 const Gallery = () => {
+  const [showProject, setShowProject] = useState(false)
+
   const data = useStaticQuery(graphql`
     query {
       img9: file(relativePath: { eq: "trash9.jpg" }) {
@@ -35,37 +39,57 @@ const Gallery = () => {
       }
     }
   `)
+
+  const handleOnClick = () => {
+    setShowProject(true)
+  }
+
+  const closeOverlay = () => {
+    console.log("happened")
+    setShowProject(false)
+  }
+
   return (
     <div className="gallery">
+      {showProject ? <Overlay display={closeOverlay}></Overlay> : ""}
+
       <h3 className="gallery__title">Referenssit</h3>
       <div className="gallery__cases">
-        <div className="gallery__case">
-          <Img
+        <div className="gallery__case" onClick={handleOnClick}>
+          <BackgroundImage
+            Tag="div"
+            className="gallery__background_img"
             fluid={data.img9.childImageSharp.fluid}
-            style={{ transition: "all .5s ease", maxHeight: "600px" }}
-          ></Img>
+            backgroundColor={`#040e18`}
+          ></BackgroundImage>
+          <p className="gallery__case_text">Syrjämän konfrenssikeskus</p>
+        </div>
+        <div className="gallery__case" onClick={handleOnClick}>
+          <BackgroundImage
+            Tag="div"
+            className="gallery__background_img"
+            fluid={data.img10.childImageSharp.fluid}
+            backgroundColor={`#040e18`}
+          ></BackgroundImage>
+          <p className="gallery__case_text">Miedon panimo</p>
+        </div>
+        <div className="gallery__case" onClick={handleOnClick}>
+          <BackgroundImage
+            Tag="div"
+            className="gallery__background_img"
+            fluid={data.img14.childImageSharp.fluid}
+            backgroundColor={`#040e18`}
+          ></BackgroundImage>
           <p className="gallery__case_text">Saimaan Konfrenssitilat</p>
         </div>
-        <div className="gallery__case">
-          <Img
-            fluid={data.img14.childImageSharp.fluid}
-            style={{ maxHeight: "600px" }}
-          ></Img>
-          <p className="gallery__case_text">Miedon panimo</p>
-        </div>
-        <div className="gallery__case">
-          <Img
+        <div className="gallery__case" onClick={handleOnClick}>
+          <BackgroundImage
+            Tag="div"
+            className="gallery__background_img"
             fluid={data.img15.childImageSharp.fluid}
-            style={{ maxHeight: "600px" }}
-          ></Img>
-          <p className="gallery__case_text">Syrjämän Tietokeskus</p>
-        </div>
-        <div className="gallery__case">
-          <Img
-            fluid={data.img10.childImageSharp.fluid}
-            style={{ maxHeight: "600px" }}
-          ></Img>
-          <p className="gallery__case_text">Miedon panimo</p>
+            backgroundColor={`#040e18`}
+          ></BackgroundImage>
+          <p className="gallery__case_text">Särmän teknologiakeskus</p>
         </div>
       </div>
     </div>

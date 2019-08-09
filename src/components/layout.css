@@ -18,8 +18,7 @@ body {
 }
 
 /* header */
-header {
-}
+
 .header {
   margin: 30px auto 0px auto;
   display: flex;
@@ -191,14 +190,26 @@ header {
   justify-content: center;
 }
 
+.hero__background_img {
+  height: 100%;
+  width: 100%;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  background-size: cover;
+}
+
 .hero__title_container_init {
+  position: relative;
+  width: 60%;
 }
 .hero__title_text_init {
   text-align: center;
-  color: #666666;
+  color: rgb(31, 29, 29);
 
-  font-size: 32px;
-  font-weight: lighter;
+  font-size: 36px;
+  font-weight: 400;
 }
 
 .hero__title_container {
@@ -222,8 +233,14 @@ header {
 
 .hero__cta {
   margin: 0 auto;
+  position: relative;
 }
 .hero__cta_btn {
+  content: "Tutustu virtuaalikierroksiin";
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   font-size: 16px;
   margin: 0 auto;
   margin-top: 30px;
@@ -235,10 +252,64 @@ header {
   cursor: pointer;
   outline: none;
 }
+
+.hero__cta_btn:hover {
+  background-color: rgb(146, 5, 146);
+}
+
 /*hero end*/
+
+/*Services2 */
+
+.service2 {
+  width: 100%;
+  height: 100vh;
+  background: #ebebeb;
+  display: flex;
+  flex-direction: row;
+}
+
+.service2__title {
+  margin: 0px;
+  padding-top: 60px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 300;
+}
+
+.service__container_left {
+  flex-direction: row;
+  width: 50%;
+}
+
+.service2__left {
+  width: 100%;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.service2__left_item {
+  width: 50%;
+  display: flex;
+  margin-bottom: 60px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.service2__right {
+  width: 50%;
+  height: 100%;
+  background: blue;
+}
+
+/*Services2 end*/
 
 /*Services */
 .services {
+  width: 100%;
+  height: 100vh;
   margin-bottom: 60px;
   padding-bottom: 30px;
   background: #e6e2e266;
@@ -249,6 +320,7 @@ header {
   font-size: 30px;
   font-weight: 300;
   padding: 30px;
+  margin-top: 0px;
 }
 
 .service__container {
@@ -453,26 +525,55 @@ header {
   width: 1100px;
   margin: 0 auto;
   display: flex;
+  height: 90%;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
   cursor: pointer;
 }
 .gallery__case {
+  position: relative;
   width: 48%;
+  height: 40%;
   margin-bottom: 30px;
   border-radius: 10px;
   overflow: hidden;
   transition: all 0.5s ease;
 }
 
-.gallery__case img {
-  transform: scale(1);
-  transition: all 0.5s ease;
+.gallery__background_img {
+  height: 100%;
+  width: 100%;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  background-size: cover;
 }
 
-.gallery__case:hover img {
-  transform: scale(1.1);
+.gallery__overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.gallery__background_img::after {
+  content: "";
+  display: none;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(236, 73, 23, 0.75);
+}
+
+.gallery__case:hover .gallery__background_img::after {
+  display: block;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.gallery__case:hover .gallery__background_img {
+  transform: scale(1.2);
+  opacity: 0.3;
 }
 
 .gallery__case_text {
@@ -482,8 +583,68 @@ header {
   padding: 15px;
   -webkit-box-shadow: 4px 7px 8px -8px #000000;
   box-shadow: 4px 7px 8px -8px #000000;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  transition: none;
 }
 /*Gallery end*/
+
+/*Overlay */
+.overlay {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100vh;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.9);
+}
+
+.overlay__close {
+  z-index: 2000;
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  opacity: 1;
+  cursor: pointer;
+}
+/*Overlay end*/
+
+/*Projects*/
+.project {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 90%;
+  height: 95%;
+}
+
+.project__frame_container {
+  padding-top: 80px;
+  width: 100%;
+  height: 600px;
+}
+
+.project__frame {
+  width: 100%;
+  height: 100%;
+}
+
+.project__desc_container {
+  background: white;
+  width: 100%;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.project__desc {
+  width: 960px;
+  margin: 0 auto;
+}
+/*Projects end*/
 
 /*Footer*/
 

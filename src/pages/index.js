@@ -4,7 +4,7 @@ import { Helmet } from "react-helmet"
 
 import Layout from "../components/layout"
 import Hero from "../components/hero"
-import Services from "../components/services"
+import Service2 from "../components/service2"
 import Company from "../components/company"
 import Contact from "../components/contact"
 import Gallery from "../components/gallery"
@@ -24,7 +24,7 @@ const IndexPage = ({ children }) => (
     <SEO title="Home" />
     <SecondaryNav></SecondaryNav>
     <Hero></Hero>
-    <Services></Services>
+    <Service2></Service2>
     <Company></Company>
     <Gallery></Gallery>
     <Contact></Contact>

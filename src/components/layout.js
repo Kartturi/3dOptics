@@ -16,6 +16,10 @@ import {
   faHotel,
   faArrowRight,
   faArrowLeft,
+  faTimesCircle,
+  faSchool,
+  faCar,
+  faUser,
 } from "@fortawesome/free-solid-svg-icons"
 
 import Header from "./header"
@@ -30,7 +34,11 @@ library.add(
   faHotel,
   faInstagram,
   faArrowLeft,
-  faArrowRight
+  faArrowRight,
+  faTimesCircle,
+  faSchool,
+  faCar,
+  faUser
 )
 
 const Layout = ({ children }) => {
