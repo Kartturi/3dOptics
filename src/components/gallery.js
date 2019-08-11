@@ -9,28 +9,28 @@ const Gallery = () => {
 
   const data = useStaticQuery(graphql`
     query {
-      img9: file(relativePath: { eq: "trash9.jpg" }) {
+      img1: file(relativePath: { eq: "gallery1.jpg" }) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      img10: file(relativePath: { eq: "trash10.jpg" }) {
+      img2: file(relativePath: { eq: "gallery2.jpg" }) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      img14: file(relativePath: { eq: "trash14.jpg" }) {
+      img3: file(relativePath: { eq: "gallery3.jpg" }) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      img15: file(relativePath: { eq: "trash15.jpg" }) {
+      img4: file(relativePath: { eq: "gallery4.jpg" }) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid
@@ -59,7 +59,7 @@ const Gallery = () => {
           <BackgroundImage
             Tag="div"
             className="gallery__background_img"
-            fluid={data.img9.childImageSharp.fluid}
+            fluid={data.img1.childImageSharp.fluid}
             backgroundColor={`#040e18`}
           ></BackgroundImage>
           <p className="gallery__case_text">Syrjämän konfrenssikeskus</p>
@@ -68,7 +68,7 @@ const Gallery = () => {
           <BackgroundImage
             Tag="div"
             className="gallery__background_img"
-            fluid={data.img10.childImageSharp.fluid}
+            fluid={data.img2.childImageSharp.fluid}
             backgroundColor={`#040e18`}
           ></BackgroundImage>
           <p className="gallery__case_text">Miedon panimo</p>
@@ -77,7 +77,7 @@ const Gallery = () => {
           <BackgroundImage
             Tag="div"
             className="gallery__background_img"
-            fluid={data.img14.childImageSharp.fluid}
+            fluid={data.img3.childImageSharp.fluid}
             backgroundColor={`#040e18`}
           ></BackgroundImage>
           <p className="gallery__case_text">Saimaan Konfrenssitilat</p>
@@ -86,7 +86,7 @@ const Gallery = () => {
           <BackgroundImage
             Tag="div"
             className="gallery__background_img"
-            fluid={data.img15.childImageSharp.fluid}
+            fluid={data.img4.childImageSharp.fluid}
             backgroundColor={`#040e18`}
           ></BackgroundImage>
           <p className="gallery__case_text">Särmän teknologiakeskus</p>

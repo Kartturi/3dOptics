@@ -127,6 +127,15 @@
   }
 }
 
+@media only screen and (max-width: 1300px) {
+  .service__container_left {
+    width: 50%;
+  }
+
+  .service2__right {
+    width: 50%;
+  }
+}
 @media only screen and (max-width: 800px) {
   .service2 {
     height: auto;
@@ -246,6 +255,14 @@
   .gallery__case {
     width: 90%;
     height: 220px;
+  }
+
+  .project__desc h2 {
+    font-size: 18px;
+  }
+
+  .project__desc_container {
+    margin-bottom: 5px;
   }
 }
 

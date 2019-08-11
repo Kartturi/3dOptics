@@ -299,6 +299,7 @@ body {
   background: #f5f3f3;
   display: flex;
   flex-direction: row;
+  justify-content: center;
 }
 
 .service2__icons {
@@ -315,7 +316,7 @@ body {
 
 .service__container_left {
   flex-direction: row;
-  width: 50%;
+  width: 40%;
 }
 
 .service2__left {
@@ -349,7 +350,7 @@ body {
 }
 
 .service2__right {
-  width: 50%;
+  width: 40%;
   height: 100%;
 }
 
@@ -754,13 +755,13 @@ body {
   justify-content: center;
   align-items: flex-start;
   width: 90%;
-  height: 95%;
+  height: 100%;
 }
 
 .project__frame_container {
   padding-top: 80px;
   width: 100%;
-  height: 600px;
+  height: 60%;
 }
 
 .project__frame {
@@ -771,13 +772,18 @@ body {
 .project__desc_container {
   background: white;
   width: 100%;
+  height: 25%;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
+  overflow: scroll;
+  overflow-x: hidden;
 }
 
 .project__desc {
-  width: 960px;
+  box-sizing: border-box;
+  padding: 0 10px 0 10px;
   margin: 0 auto;
+  width: 75%;
 }
 /*Projects end*/
 
