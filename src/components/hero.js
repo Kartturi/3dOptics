@@ -76,7 +76,7 @@ const Hero = () => {
 
   const imageData = data.hero.childImageSharp.fluid
   return (
-    <div className="hero">
+    <div id="hero" className="hero">
       {!virtualTour ? (
         <BackgroundImage
           Tag="div"

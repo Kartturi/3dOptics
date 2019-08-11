@@ -2,7 +2,7 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React, { useState, useEffect } from "react"
 
-const SecondaryNav = () => {
+const MobileNav = () => {
   const [showNav, setShowNav] = useState(false)
   const [showIcon, setShowIcon] = useState(false)
 
@@ -24,15 +24,9 @@ const SecondaryNav = () => {
       setShowIcon(true)
     }
   }
-  console.log(showIcon)
+
   return (
-    <div
-      className={`${
-        showIcon
-          ? "second-nav__container_visible"
-          : "second-nav__container_hidden"
-      }`}
-    >
+    <div className={`mobile-nav`}>
       <div
         className={`second-nav ${showNav ? "second-nav__change" : ""}`}
         onClick={toggleNav}
@@ -69,4 +63,4 @@ const SecondaryNav = () => {
   )
 }
 
-export default SecondaryNav
+export default MobileNav

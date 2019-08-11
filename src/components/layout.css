@@ -20,13 +20,18 @@ body {
 /* header */
 
 .header {
-  margin: 30px auto 0px auto;
+  margin: 0px auto 0px auto;
+  padding-top: 30px;
+  padding-bottom: 30px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   max-width: 960px;
+  background: #ffffff;
 }
 .header__logo {
+  font-size: 15px;
+  color: #666666;
 }
 
 .header__nav {
@@ -46,11 +51,15 @@ body {
   content: "";
   display: block;
   width: 0px;
-  border-bottom: 1px solid #ff0000;
+  border-bottom: 1px solid purple;
   transition: 0.2s;
 }
 .header__nav_item:hover::after {
   width: 100%;
+}
+
+.mobile-nav {
+  display: none;
 }
 
 /* header end*/
@@ -111,8 +120,9 @@ body {
   top: 0px;
   height: 100vh;
   width: 0px;
-  background: #f5f3f3;
+  background: #f5f5f3;
   z-index: 100;
+  border-right: 1px solid purple;
   transition: 0.3s;
 }
 .second-nav__content_visible {
@@ -123,17 +133,26 @@ body {
 .second-nav__content_links {
   margin-top: 200px;
 
-  width: 0;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .second-nav__content_link {
-  font-size: 30px;
+  font-size: 24px;
+  text-decoration: none;
+  color: #666666;
   margin-bottom: 30px;
-  margin-left: 35px;
   cursor: pointer;
+  text-align: center;
   display: block;
 }
 
 .second-nav__content_link:hover {
+  color: purple;
+}
+
+.second-nav__content_link:active {
   color: purple;
 }
 /* secondary nav end*/
@@ -141,7 +160,6 @@ body {
 /*hero */
 
 .hero {
-  margin-top: 30px;
   position: relative;
 
   height: calc(100vh - 100px);
@@ -452,7 +470,6 @@ body {
 .company__left {
   width: 30%;
   color: black;
-  z-index: 100;
 
   color: #666666;
   padding: 15px;

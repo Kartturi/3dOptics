@@ -8,7 +8,7 @@ const Contact = () => {
   const handleInputChange = e => {}
 
   return (
-    <div className="contact">
+    <div id="contact" className="contact">
       <div className="contact__top">
         <h3 className="contact__top_title">
           Kiinnostuitko? Ota yhteyttä niin jutellaan lisää

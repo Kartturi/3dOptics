@@ -23,7 +23,7 @@ const Company = () => {
     }
   `)
   return (
-    <div className="company">
+    <div id="company" className="company">
       <h3 className="company__title">360 kuvat yrityksesi tueksi</h3>
       <div className="company__container">
         <div className="company__left">

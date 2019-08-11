@@ -26,6 +26,7 @@ import Header from "./header"
 import Footer from "./footer"
 
 import "./layout.css"
+import "./mediaQ.css"
 
 library.add(
   faFacebook,
@@ -51,6 +52,11 @@ const Layout = ({ children }) => {
       }
     }
   `)
+
+  if (typeof window !== "undefined") {
+    // eslint-disable-next-line global-require
+    require("smooth-scroll")('a[href*="#"]')
+  }
 
   return (
     <>

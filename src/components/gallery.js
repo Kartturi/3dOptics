@@ -50,7 +50,7 @@ const Gallery = () => {
   }
 
   return (
-    <div className="gallery">
+    <div id="gallery" className="gallery">
       {showProject ? <Overlay display={closeOverlay}></Overlay> : ""}
 
       <h3 className="gallery__title">Referenssit</h3>
