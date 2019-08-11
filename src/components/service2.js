@@ -24,8 +24,8 @@ const Services2 = () => {
             }}
           >
             <FontAwesomeIcon
+              className="service2__icons"
               icon="home"
-              size="4x"
               style={{ color: "purple" }}
             />
             <h4 className="service2__left_item_title">Kiinteistönvälittäjät</h4>
@@ -40,8 +40,8 @@ const Services2 = () => {
             data-current="2"
           >
             <FontAwesomeIcon
+              className="service2__icons"
               icon="coffee"
-              size="4x"
               style={{ color: "purple", marginTop: "15px" }}
             />
             <h4 className="service2__left_item_title">Ravintolat</h4>
@@ -56,8 +56,8 @@ const Services2 = () => {
             data-current="3"
           >
             <FontAwesomeIcon
+              className="service2__icons"
               icon="hotel"
-              size="4x"
               style={{ color: "purple", marginTop: "15px" }}
             />
             <h4 className="service2__left_item_title">Hotellit</h4>
@@ -72,8 +72,8 @@ const Services2 = () => {
             data-current="4"
           >
             <FontAwesomeIcon
+              className="service2__icons"
               icon="school"
-              size="4x"
               style={{ color: "purple", marginTop: "15px" }}
             />
             <h4 className="service2__left_item_title">Julkiset tilat</h4>
@@ -88,8 +88,8 @@ const Services2 = () => {
             data-current="5"
           >
             <FontAwesomeIcon
+              className="service2__icons"
               icon="car"
-              size="4x"
               style={{ color: "purple", marginTop: "15px" }}
             />
             <h4 className="service2__left_item_title">Autokauppa</h4>
@@ -104,8 +104,8 @@ const Services2 = () => {
             data-current="6"
           >
             <FontAwesomeIcon
+              className="service2__icons"
               icon="user"
-              size="4x"
               style={{ color: "purple", marginTop: "15px" }}
             />
             <h4 className="service2__left_item_title">Muut</h4>
