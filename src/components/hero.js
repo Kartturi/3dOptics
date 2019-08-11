@@ -104,17 +104,6 @@ const Hero = () => {
         </BackgroundImage>
       ) : (
         <div className="hero-frame__container">
-          <iframe
-            onLoad={() => {
-              setTimeout(() => {
-                setShowTitle(true)
-              }, 7000)
-            }}
-            className="hero-frame"
-            src={`${currentTourUrl}`}
-            frameBorder="0"
-            style={{ position: "absolute", height: "85%", border: "none" }}
-          ></iframe>
           <div
             onClick={() => {
               setShowTitle(false)
@@ -127,24 +116,40 @@ const Hero = () => {
               ""
             )}
           </div>
+          <div className="hero-frame_top">
+            <iframe
+              onLoad={() => {
+                setTimeout(() => {
+                  setShowTitle(true)
+                }, 7000)
+              }}
+              className="hero-frame"
+              src={`${currentTourUrl}`}
+              frameBorder="0"
+              style={{ position: "absolute", height: "80%", border: "none" }}
+            ></iframe>
+          </div>
+
           <div className="hero-frame__arrows">
             <h5 className="hero-frame__title">{`${currentTourDesc}`}</h5>
-            <FontAwesomeIcon
-              onClick={() => {
-                handleTourDisplay(currentTourId, "left")
-              }}
-              icon="arrow-left"
-              size="3x"
-              className="hero-frame__arrows_icon"
-            />
-            <FontAwesomeIcon
-              onClick={() => {
-                handleTourDisplay(currentTourId, "right")
-              }}
-              icon="arrow-right"
-              size="3x"
-              className="hero-frame__arrows_icon"
-            />
+            <div className="hero__icon_container">
+              <FontAwesomeIcon
+                onClick={() => {
+                  handleTourDisplay(currentTourId, "left")
+                }}
+                icon="arrow-left"
+                size="2x"
+                className="hero-frame__arrows_icon"
+              />
+              <FontAwesomeIcon
+                onClick={() => {
+                  handleTourDisplay(currentTourId, "right")
+                }}
+                icon="arrow-right"
+                size="2x"
+                className="hero-frame__arrows_icon"
+              />
+            </div>
           </div>
         </div>
       )}
