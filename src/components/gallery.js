@@ -9,46 +9,22 @@ const Gallery = () => {
 
   const data = useStaticQuery(graphql`
     query {
-      img1: file(relativePath: { eq: "gallery1.jpg" }) {
+      img1: file(relativePath: { eq: "gallery4.jpg" }) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      
+      asd: file(relativePath: { eq: "gallery3.jpg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
   `)
-
-  const data2 = useStaticQuery(graphql`
-  query {
-    img2: file(relativePath: { eq: "gallery2.jpg" }) {
-      childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-`)
-  const data3 = useStaticQuery(graphql`
-  query {
-    img3: file(relativePath: { eq: "gallery3.jpg" }) {
-      childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-`)
-  const data4 = useStaticQuery(graphql`
-  query {
-    img4: file(relativePath: { eq: "gallery4.jpg" }) {
-      childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-`)
 
   const handleOnClick = () => {
     setShowProject(true)
@@ -78,29 +54,29 @@ const Gallery = () => {
           <BackgroundImage
             Tag="div"
             className="gallery__background_img"
-            fluid={data2.img2.childImageSharp.fluid}
+            fluid={data.asd.childImageSharp.fluid}
             backgroundColor={`#040e18`}
           ></BackgroundImage>
           <p className="gallery__case_text">Miedon panimo</p>
         </div>
-        <div className="gallery__case" onClick={handleOnClick}>
+        {/* <div className="gallery__case" onClick={handleOnClick}>
           <BackgroundImage
             Tag="div"
             className="gallery__background_img"
-            fluid={data3.img3.childImageSharp.fluid}
+            fluid={data.img3.childImageSharp.fluid}
             backgroundColor={`#040e18`}
           ></BackgroundImage>
           <p className="gallery__case_text">Saimaan Konfrenssitilat</p>
-        </div>
-        <div className="gallery__case" onClick={handleOnClick}>
+        </div> */}
+        {/* <div className="gallery__case" onClick={handleOnClick}>
           <BackgroundImage
             Tag="div"
             className="gallery__background_img"
-            fluid={data4.img4.childImageSharp.fluid}
+            fluid={data.img4.childImageSharp.fluid}
             backgroundColor={`#040e18`}
           ></BackgroundImage>
           <p className="gallery__case_text">Särmän teknologiakeskus</p>
-        </div>
+        </div> */}
       </div>
     </div>
   )
