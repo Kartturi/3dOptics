@@ -6,6 +6,7 @@ import Img from "gatsby-image"
 
 const Gallery = () => {
   const [showProject, setShowProject] = useState(false)
+  const [currentProject, setCurrentProject] = useState(0)
 
   const data = useStaticQuery(graphql`
     query {
@@ -40,22 +41,30 @@ const Gallery = () => {
     }
   `)
 
-  const handleOnClick = () => {
+  const handleOnClick = e => {
+    setCurrentProject(Number(e.currentTarget.dataset.current))
     setShowProject(true)
+
+    console.log(e.currentTarget.dataset.current)
   }
 
   const closeOverlay = () => {
     console.log("happened")
+    setCurrentProject(0)
     setShowProject(false)
   }
 
   return (
     <div id="gallery" className="gallery">
-      {showProject ? <Overlay display={closeOverlay}></Overlay> : ""}
+      {showProject ? (
+        <Overlay display={closeOverlay} current={currentProject}></Overlay>
+      ) : (
+        ""
+      )}
 
-      <h3 className="gallery__title">Referenssit</h3>
+      <h3 className="gallery__title">Cases</h3>
       <div className="gallery__cases">
-        <div className="gallery__case" onClick={handleOnClick}>
+        <div className="gallery__case" onClick={handleOnClick} data-current="1">
           <BackgroundImage
             Tag="div"
             className="gallery__background_img_1 gallery__background_img"
@@ -64,16 +73,16 @@ const Gallery = () => {
           ></BackgroundImage>
           <p className="gallery__case_text">Syrjämän konfrenssikeskus</p>
         </div>
-        <div className="gallery__case" onClick={handleOnClick}>
+        <div className="gallery__case" onClick={handleOnClick} data-current="2">
           <BackgroundImage
             Tag="div"
             className="gallery__background_img_2 gallery__background_img"
             fluid={data.img2.childImageSharp.fluid}
             backgroundColor={`#040e18`}
           ></BackgroundImage>
-          <p className="gallery__case_text">Miedon panimo</p>
+          <p className="gallery__case_text">Astran sisustus</p>
         </div>
-        <div className="gallery__case" onClick={handleOnClick}>
+        <div className="gallery__case" onClick={handleOnClick} data-current="1">
           <BackgroundImage
             Tag="div"
             className="gallery__background_img_3 gallery__background_img"
@@ -82,7 +91,7 @@ const Gallery = () => {
           ></BackgroundImage>
           <p className="gallery__case_text">Saimaan Konfrenssitilat</p>
         </div>
-        <div className="gallery__case" onClick={handleOnClick}>
+        <div className="gallery__case" onClick={handleOnClick} data-current="1">
           <BackgroundImage
             Tag="div"
             className="gallery__background_img_4 gallery__background_img"

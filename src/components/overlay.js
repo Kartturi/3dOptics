@@ -27,7 +27,7 @@ const Overlay = props => {
           style={{ color: "red" }}
         />
       </div>
-      <Project1></Project1>
+      <Project1 current={props.current}></Project1>
     </div>
   )
 }

@@ -748,6 +748,10 @@ body {
   opacity: 1;
   cursor: pointer;
 }
+
+.overlay__close:hover {
+  color: purple;
+}
 /*Overlay end*/
 
 /*Projects*/

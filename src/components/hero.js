@@ -48,6 +48,13 @@ const Hero = () => {
           "https://vt.plushglobalmedia.com/tour/TT167OBLNC/embed?fbclid=IwAR0g0LW_33FJFdpYTs2Lu4ldWZEAlp4KQAi2TXwLTl6BIPsDcmxnl6IIS5w",
         title: "Näytä asiakkaillesi hienot tilasi ennen vierailua",
       },
+      {
+        id: 3,
+        desc: "3.Opel Astra",
+        url:
+          "https://momento360.com/e/u/d392853d33474583913962a7f2a64d63?utm_campaign=embed&utm_source=other&utm_medium=other&heading=0&pitch=0&field-of-view=75",
+        title: "Käytettyjen autojen alku siisteystarkastus",
+      },
     ]
 
     let newCurrentNum
