@@ -23,7 +23,7 @@ const Gallery1 = props => {
     >
       <BackgroundImage
         Tag="div"
-        className="gallery__background_img"
+        className="gallery__background_img_1"
         fluid={data.img.childImageSharp.fluid}
         backgroundColor={`#040e18`}
       ></BackgroundImage>

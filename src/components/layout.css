@@ -677,6 +677,24 @@ body {
   transition: all 0.5s ease;
 }
 
+.gallery__background_img_1 {
+  height: 100%;
+  width: 100%;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  background-size: cover;
+}
+.gallery__background_img_2 {
+  height: 100%;
+  width: 100%;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  background-size: cover;
+}
 .gallery__background_img {
   height: 100%;
   width: 100%;
