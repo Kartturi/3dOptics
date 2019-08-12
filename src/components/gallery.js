@@ -10,14 +10,28 @@ const Gallery = () => {
 
   const data = useStaticQuery(graphql`
     query {
-      img1: file(relativePath: { eq: "service2.jpg" }) {
+      img1: file(relativePath: { eq: "gallery1.jpg" }) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      asd: file(relativePath: { eq: "service1.jpg" }) {
+      img2: file(relativePath: { eq: "gallery2.jpg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      img3: file(relativePath: { eq: "gallery3.jpg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      img4: file(relativePath: { eq: "gallery4.jpg" }) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid
@@ -38,7 +52,9 @@ const Gallery = () => {
 
   const imageQueries = {
     img1: data.img1.childImageSharp.fluid,
-    img2: data.asd.childImageSharp.fluid,
+    img2: data.img2.childImageSharp.fluid,
+    img3: data.img3.childImageSharp.fluid,
+    img4: data.img4.childImageSharp.fluid,
   }
 
   return (
@@ -48,25 +64,9 @@ const Gallery = () => {
       <h3 className="gallery__title">Referenssit</h3>
       <div className="gallery__cases">
         <Gallery1 query={imageQueries.img1} callback={handleOnClick}></Gallery1>
+        <Gallery1 query={imageQueries.img3} callback={handleOnClick}></Gallery1>
         <Gallery1 query={imageQueries.img2} callback={handleOnClick}></Gallery1>
-        {/* <div className="gallery__case" onClick={handleOnClick}>
-          <BackgroundImage
-            Tag="div"
-            className="gallery__background_img"
-            fluid={data.img3.childImageSharp.fluid}
-            backgroundColor={`#040e18`}
-          ></BackgroundImage>
-          <p className="gallery__case_text">Saimaan Konfrenssitilat</p>
-        </div> */}
-        {/* <div className="gallery__case" onClick={handleOnClick}>
-          <BackgroundImage
-            Tag="div"
-            className="gallery__background_img"
-            fluid={data.img4.childImageSharp.fluid}
-            backgroundColor={`#040e18`}
-          ></BackgroundImage>
-          <p className="gallery__case_text">Särmän teknologiakeskus</p>
-        </div> */}
+        <Gallery1 query={imageQueries.img4} callback={handleOnClick}></Gallery1>
       </div>
     </div>
   )
