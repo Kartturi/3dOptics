@@ -9,27 +9,6 @@ const Gallery = () => {
 
   const data = useStaticQuery(graphql`
     query {
-      img1: file(relativePath: { eq: "gallery1.jpg" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      img2: file(relativePath: { eq: "gallery2.jpg" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      img3: file(relativePath: { eq: "gallery3.jpg" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
       img4: file(relativePath: { eq: "gallery4.jpg" }) {
         childImageSharp {
           fluid {
@@ -59,7 +38,7 @@ const Gallery = () => {
           <BackgroundImage
             Tag="div"
             className="gallery__background_img"
-            fluid={data.img1.childImageSharp.fluid}
+            fluid={data.img4.childImageSharp.fluid}
             backgroundColor={`#040e18`}
           ></BackgroundImage>
           <p className="gallery__case_text">Syrjämän konfrenssikeskus</p>
@@ -68,7 +47,7 @@ const Gallery = () => {
           <BackgroundImage
             Tag="div"
             className="gallery__background_img"
-            fluid={data.img2.childImageSharp.fluid}
+            fluid={data.img4.childImageSharp.fluid}
             backgroundColor={`#040e18`}
           ></BackgroundImage>
           <p className="gallery__case_text">Miedon panimo</p>
@@ -77,7 +56,7 @@ const Gallery = () => {
           <BackgroundImage
             Tag="div"
             className="gallery__background_img"
-            fluid={data.img3.childImageSharp.fluid}
+            fluid={data.img4.childImageSharp.fluid}
             backgroundColor={`#040e18`}
           ></BackgroundImage>
           <p className="gallery__case_text">Saimaan Konfrenssitilat</p>
