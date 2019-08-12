@@ -43,8 +43,13 @@ const Company = () => {
             imgStyle={{ objectFit: "contain" }}
           ></Img>
 
-          <p>My name is nico, and I am very special boy</p>
-          <p>I like cats and 2d anime grilss</p>
+          <p>My name is nico, and I am 3d enthuastic</p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi
+            consequatur aperiam quaerat ad eveniet fugiat neque earum deserunt!
+            Cupiditate at aut pariatur expedita, molestias ipsam? Maiores in
+            perferendis debitis eius!
+          </p>
         </div>
       </div>
     </div>

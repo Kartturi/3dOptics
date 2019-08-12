@@ -79,7 +79,7 @@ const ServiceRightText = props => {
     ),
     content4: (
       <div>
-        <h3>Matka alkaa jo kotoa</h3>
+        <h3>Nähtävyydet tutuksi modernilla tavalla</h3>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. In eveniet,
           sapiente commodi dolores provident voluptatibus magnam. Fugit

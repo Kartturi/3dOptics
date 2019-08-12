@@ -1,7 +1,7 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React, { useState, useEffect } from "react"
-import Project1 from "../components/projects/project1"
+import Project1 from "../components/project1"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 const Overlay = props => {
