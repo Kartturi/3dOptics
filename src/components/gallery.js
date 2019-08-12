@@ -9,7 +9,7 @@ const Gallery = () => {
 
   const data = useStaticQuery(graphql`
     query {
-      img1: file(relativePath: { eq: "gallery4.jpg" }) {
+      img1: file(relativePath: { eq: "gallery3.jpg" }) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid
