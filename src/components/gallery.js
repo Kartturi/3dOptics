@@ -58,7 +58,7 @@ const Gallery = () => {
         <div className="gallery__case" onClick={handleOnClick}>
           <BackgroundImage
             Tag="div"
-            className="gallery__background_img_1"
+            className="gallery__background_img_1 gallery__background_img"
             fluid={data.img1.childImageSharp.fluid}
             backgroundColor={`#040e18`}
           ></BackgroundImage>
@@ -67,7 +67,7 @@ const Gallery = () => {
         <div className="gallery__case" onClick={handleOnClick}>
           <BackgroundImage
             Tag="div"
-            className="gallery__background_img_2"
+            className="gallery__background_img_2 gallery__background_img"
             fluid={data.img2.childImageSharp.fluid}
             backgroundColor={`#040e18`}
           ></BackgroundImage>
@@ -76,7 +76,7 @@ const Gallery = () => {
         <div className="gallery__case" onClick={handleOnClick}>
           <BackgroundImage
             Tag="div"
-            className="gallery__background_img_3"
+            className="gallery__background_img_3 gallery__background_img"
             fluid={data.img3.childImageSharp.fluid}
             backgroundColor={`#040e18`}
           ></BackgroundImage>
@@ -85,7 +85,7 @@ const Gallery = () => {
         <div className="gallery__case" onClick={handleOnClick}>
           <BackgroundImage
             Tag="div"
-            className="gallery__background_img_4"
+            className="gallery__background_img_4 gallery__background_img"
             fluid={data.img4.childImageSharp.fluid}
             backgroundColor={`#040e18`}
           ></BackgroundImage>
