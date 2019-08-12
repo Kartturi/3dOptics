@@ -2,6 +2,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import React, { useState } from "react"
 import BackgroundImage from "gatsby-background-image"
 import Overlay from "../components/overlay"
+import Gallery1 from "../components/galleries/gallery1"
 import Img from "gatsby-image"
 
 const Gallery = () => {
@@ -46,24 +47,8 @@ const Gallery = () => {
 
       <h3 className="gallery__title">Referenssit</h3>
       <div className="gallery__cases">
-        <div className="gallery__case" onClick={handleOnClick}>
-          <BackgroundImage
-            Tag="div"
-            className="gallery__background_img"
-            fluid={imageQueries.img2}
-            backgroundColor={`#040e18`}
-          ></BackgroundImage>
-          <p className="gallery__case_text">Syrjämän konfrenssikeskus</p>
-        </div>
-        <div className="gallery__case" onClick={handleOnClick}>
-          <BackgroundImage
-            Tag="div"
-            className="gallery__background_img"
-            fluid={imageQueries.img1}
-            backgroundColor={`#040e18`}
-          ></BackgroundImage>
-          <p className="gallery__case_text">Miedon panimo</p>
-        </div>
+        <Gallery1 query={imageQueries.img1} callback={handleOnClick}></Gallery1>
+        <Gallery1 query={imageQueries.img2} callback={handleOnClick}></Gallery1>
         {/* <div className="gallery__case" onClick={handleOnClick}>
           <BackgroundImage
             Tag="div"
