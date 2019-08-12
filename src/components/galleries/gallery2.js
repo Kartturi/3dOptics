@@ -2,10 +2,10 @@ import React, { useState } from "react"
 import BackgroundImage from "gatsby-background-image"
 import { useStaticQuery, graphql } from "gatsby"
 
-const Gallery1 = props => {
+const Gallery2 = props => {
   const data = useStaticQuery(graphql`
     query {
-      img: file(relativePath: { eq: "gallery1.jpg" }) {
+      img: file(relativePath: { eq: "gallery2.jpg" }) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid
@@ -32,4 +32,4 @@ const Gallery1 = props => {
   )
 }
 
-export default Gallery1
+export default Gallery2
