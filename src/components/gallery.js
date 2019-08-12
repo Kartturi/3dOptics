@@ -9,14 +9,14 @@ const Gallery = () => {
 
   const data = useStaticQuery(graphql`
     query {
-      img1: file(relativePath: { eq: "gallery3.jpg" }) {
+      img1: file(relativePath: { eq: "service2.jpg" }) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      asd: file(relativePath: { eq: "gallery3.jpg" }) {
+      asd: file(relativePath: { eq: "service1.jpg" }) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid
@@ -50,7 +50,7 @@ const Gallery = () => {
           <BackgroundImage
             Tag="div"
             className="gallery__background_img"
-            fluid={imageQueries.img1}
+            fluid={imageQueries.img2}
             backgroundColor={`#040e18`}
           ></BackgroundImage>
           <p className="gallery__case_text">Syrjämän konfrenssikeskus</p>
@@ -59,7 +59,7 @@ const Gallery = () => {
           <BackgroundImage
             Tag="div"
             className="gallery__background_img"
-            fluid={imageQueries.img2}
+            fluid={imageQueries.img1}
             backgroundColor={`#040e18`}
           ></BackgroundImage>
           <p className="gallery__case_text">Miedon panimo</p>
