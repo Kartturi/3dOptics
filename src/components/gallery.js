@@ -16,6 +16,13 @@ const Gallery = () => {
           }
         }
       }
+      img3: file(relativePath: { eq: "gallery3.jpg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
     }
   `)
 
@@ -47,7 +54,7 @@ const Gallery = () => {
           <BackgroundImage
             Tag="div"
             className="gallery__background_img"
-            fluid={data.img4.childImageSharp.fluid}
+            fluid={data.img3.childImageSharp.fluid}
             backgroundColor={`#040e18`}
           ></BackgroundImage>
           <p className="gallery__case_text">Miedon panimo</p>
