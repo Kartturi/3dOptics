@@ -9,7 +9,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 const ServiceRight = props => {
   const data = useStaticQuery(graphql`
     query {
-      sr1: file(relativePath: { eq: "service1.jpg" }) {
+      sr1: file(relativePath: { eq: "service3.jpg" }) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid
@@ -23,7 +23,7 @@ const ServiceRight = props => {
           }
         }
       }
-      sr3: file(relativePath: { eq: "service3.jpg" }) {
+      sr3: file(relativePath: { eq: "service1.jpg" }) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid

@@ -35,6 +35,11 @@ const Gallery = () => {
     setShowProject(false)
   }
 
+  const imageQueries = {
+    img1: data.img1.childImageSharp.fluid,
+    img2: data.asd.childImageSharp.fluid,
+  }
+
   return (
     <div id="gallery" className="gallery">
       {showProject ? <Overlay display={closeOverlay}></Overlay> : ""}
@@ -45,7 +50,7 @@ const Gallery = () => {
           <BackgroundImage
             Tag="div"
             className="gallery__background_img"
-            fluid={data.img1.childImageSharp.fluid}
+            fluid={imageQueries.img1}
             backgroundColor={`#040e18`}
           ></BackgroundImage>
           <p className="gallery__case_text">Syrjämän konfrenssikeskus</p>
@@ -54,7 +59,7 @@ const Gallery = () => {
           <BackgroundImage
             Tag="div"
             className="gallery__background_img"
-            fluid={data.asd.childImageSharp.fluid}
+            fluid={imageQueries.img2}
             backgroundColor={`#040e18`}
           ></BackgroundImage>
           <p className="gallery__case_text">Miedon panimo</p>
