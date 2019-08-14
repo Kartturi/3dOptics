@@ -60,8 +60,8 @@ const Contact = () => {
           </p>
           <p className="contact__right_item">Niko Heikelä</p>
           <p className="contact__right_item">050640405</p>
-          <p className="contact__right_item">Niko.heikelä@.kuumalinja@com</p>
-          <p className="contact__right_item">Jonnentie 5</p>
+          <p className="contact__right_item">Niko.heikelä@.email.com</p>
+          <p className="contact__right_item">Mäkitie 5</p>
         </div>
       </div>
     </div>
