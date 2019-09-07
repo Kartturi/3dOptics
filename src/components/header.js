@@ -28,7 +28,7 @@ const Header = ({ siteTitle }) => (
                 color: "#666666",
               }}
             >
-              D-OPTICS
+              60-Ventures
             </span>
           </Link>
         </h1>
